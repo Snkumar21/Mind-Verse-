@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="angular.min.js"></script>
+        <script>
+            function validateEmail(email) {
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            }
+
+            function showInvalidEmailAlert() {
+                alert("Please enter a valid email address!")
+            }
+        </script>
+        <style>
+            body {
+                width: 100;
+                height: 100;
+                font-family: sans-serif;
+                background-image: url(Img/Sign-up.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 105%;
+                margin: 0%;
+            }
+
+            .container{
+                width: 100%;
+                max-width: 500px;
+                margin-right: 40%;
+                background: linear-gradient(135deg, #8f584ebb, #fff, #b463c9);
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px 0px #0c0481b6;
+                color: #04044d;
+            }
+
+            .logo{
+                font-size: 50px;
+                margin-right: 10px;
+            }
+
+            .form{
+                display: flex;
+                flex-direction: column;
+                width: 300px;
+            }
+
+            .form input
+            .form select {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                font-size: 20px;
+            }
+
+            .name{
+                width: 292px;
+                height: 25px;
+            }
+
+            .email{
+                width: 292px;
+                height: 25px;
+            }
+
+            .password{
+                width: 292px;
+                height: 25px;
+            }
+
+            .number{
+                width: 292px;
+                height: 25px;
+            }
+
+            .login{
+                width: 60px;
+                height: 30px;
+            }
+            .form button{
+                padding: 10px;
+                background-color: #dd2342;
+                color: #fdfdfd;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .form button:hover{
+                background-color: #b81d78;
+            }
+
+            .form button:disabled{
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
+
+            .link a {
+                color: #d9eeee;
+            }
+
+            .link a:hover{
+                color: rgb(252, 91, 123);
+            }
+
+            .link a:active{
+                color: rgba(204, 175, 13, 0.87);
+            }
+
+            .main{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 90vh;
+            }
+
+            .n1{
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body ng-app="MyApp">
+        <br><br>
+    <div class="main">
+        <div class="container" ng-controller="loginCtrl">
+            <center><p2><b><font size="7" font="" face="Bahnschrift Light" style="color: #02025cc0;">Welcome</font></b></p2><br>
+            <p3><font size="4" face="Elephant">Sign-Up for an account</font></p3><br></center>
+            <br><br>
+            <center>
+            <form class="form" action="connect.php" method="post" align="center">
+                <label for="name" class="n1"><font><b>Full Name :</b></font></label> 
+                    <input type="text" name="Name" id="name" class="name" placeholder="Full Name" required>
+                &nbsp;
+                <label for="email" class="n1"><font><b>Email Address :</b></font></label>
+                    <input type="email" name="Email" id="email" class="email" placeholder="Email" required>
+                &nbsp;
+                <label for="password" class="n1"><font><b>Password :</b></font></label>
+                    <input type="password" name="Password" id="password" class="password" placeholder="New Password" required>
+                &nbsp;
+                <label for="phone" class="n1"><font><b>Phone Number :</b></font></label>
+                    <input type="number" name="number" id="number" class="number" placeholder="Phone Number" required>
+                        <br><br>
+                <center><button type="submit" class="login" ng-disabled="form.$invalid">Login</button></center>
+            </form><br><br></center>
+            <p1 class="link">&nbsp;&nbsp;<a href="Login.html" style="color: black; text-decoration: none;"><b>Login</b></a>
+                <a href="" style="pointer-events: none; color: transparent;">Home</a>
+                <a href="" style="pointer-events: none; color: transparent;">Home</a>
+                <a href="" style="pointer-events: none; color: transparent;">Home</a>
+                <a href="" style="pointer-events: none; color: transparent;">Home</a>
+                <a href="" style="pointer-events: none; color: transparent;">Home</a>
+                <a href="" style="pointer-events: none; color: transparent;">Home</a>
+                <a href="" style="pointer-events: none; color: transparent;">Home</a>
+                <a href="" style="pointer-events: none; color: transparent;">Home</a>
+                &nbsp;
+                <a href="Home Page.html" style="color: black; text-decoration: none;"><b>Home</b></a></p1>
+        </div>
+    </div>    
+
+        <script>
+            var app = angular.module('loginApp',[]);
+
+            app.controller('loginCtrl',function($scope) {
+                $scope.username = " ";
+                $scope.password = " ";
+            });
+        </script>
+    </body>
+</html>

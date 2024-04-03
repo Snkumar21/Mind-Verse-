@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+    <script src="JS/angular.min.js"></script>
+    <link rel="stylesheet" href="../Css/Login.css" />
+  </head>
+  <body ng-app="MyApp">
+    <div class="main">
+      <div class="page1">
+        <div class="header_section">
+          <p1
+            ><center><b>MindVerse</b></center></p1
+          >
+          <p2
+            ><center>
+              <font face="Broadway">e-education for all</font>
+            </center></p2
+          >
+          <br />
+          <p3><center>Welcome</center></p3>
+          <p4><center>Login into your account</center></p4><br />
+          <div ng-app="MyApp" ng-controller="loginController">
+            <form id="login-form" ng-submit="submitLoginForm">
+              <label for="username">Username:</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                ng-model="username"
+                required
+              />
+              <label for="password">Password:</label>
+              <input
+                type="text"
+                id="password"
+                name="password"
+                ng-model="password"
+                required
+              />
+              <center>
+                <button type="submit" href="My Course.html">Login</button>
+              </center>
+            </form>
+            <br />
+            <center>
+              <font style="color: #06045a" size="3">Not A User</font>
+              <a href="Signup.html"
+                ><font style="color: black; text-decoration: none" size="3"
+                  ><b>Sign Up</b></font
+                >?</a
+              >
+            </center>
+          </div>
+
+          <br />
+
+          <p8
+            ><center><img src="Img/Logo.png" width="80" height="80" /></center
+          ></p8>
+          <p9
+            ><center>
+              &copy; 2023 <font color="red">Mind-Verse</font> Powered by Snkumar
+            </center></p9
+          ><br />
+        </div>
+      </div>
+      <div class="page2"></div>
+    </div>
+    <script>
+      var app = angular.module("Login", []);
+      app.controller("loginController", function ($scope) {
+        $scope.username = "";
+        $scope.password = "";
+
+        $scope.submitLoginForm = function () {
+          if ($scope.username === "" || $scope.password === "") {
+            alert("please enter both fields!");
+            return false;
+          }
+          return true;
+        };
+      });
+    </script>
+  </body>
+</html>

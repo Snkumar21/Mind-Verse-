@@ -1,0 +1,75 @@
+.main {
+  display: flex;
+  flex-direction: row;
+}
+.page1 {
+  width: 30%;
+  height: 97.5vh;
+}
+.page2 {
+  width: 70%;
+  height: 97.5vh;
+  background-image: url("Img/Login-img.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 0%;
+  margin: 0%;
+}
+.header_section {
+  background: linear-gradient(124.5deg, #86c8ee, #fff, #de88f3);
+}
+p1 {
+  color: #04045a;
+  font-size: 1.5cm;
+  text-align: center;
+}
+p2 {
+  text-align: center;
+}
+p3 {
+  font-size: 1cm;
+}
+p4 {
+  font-size: 0.5cm;
+  text-decoration: underline;
+}
+
+#login-form {
+  width: 350px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  margin-bottom: 20px;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+  display: flex;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0080ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.un {
+  width: 60%;
+  height: 30px;
+}
+.pass {
+  width: 60%;
+  height: 30px;
+}
