@@ -27,6 +27,7 @@
   flex: 50%;
   color: #ffffffbd;
   padding-left: 80px;
+  cursor: pointer;
 }
 
 .right {
@@ -108,7 +109,7 @@
   text-decoration: underline white;
 }
 
-.r1 button {
+.r1 .button {
   width: 110px;
   height: 40px;
   background-color: #0606bb;
@@ -116,11 +117,13 @@
   border: none;
   border: 1px solid white;
   border-radius: 50px;
+  font-size: 18px;
   margin-left: 50px;
 }
 
-.r1 button:hover {
+.r1 .button:hover {
   background-color: #2020f7fd;
+  font-size: 20px;
 }
 
 .r1 button a {
@@ -155,6 +158,7 @@
   font-weight: bolder;
   color: #000000;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  cursor: pointer;
 }
 
 .search-form {
@@ -220,6 +224,7 @@
   font-size: 50px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
+  cursor: pointer;
 }
 
 .t1 p {
@@ -230,6 +235,7 @@
   font-size: 20px;
   font-weight: bold;
   margin: 0% auto;
+  cursor: pointer;
 }
 
 .m1 {
@@ -406,7 +412,6 @@ b2 {
   padding-bottom: 0%;
   padding-left: 10px;
   text-align: center;
-  text-size-adjust: 4px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: #fff;
   font-size: 18px;
